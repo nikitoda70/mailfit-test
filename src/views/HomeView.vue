@@ -1,18 +1,27 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="notes">
+    <div class="container">
+      <NoteCreate />
+      <div class="notes__wrapper" v-if="notes.length">
+        <Note v-for="note in notes" :key="note.id" :note="note" />
+      </div>
+      <div v-else>No notes!!!!</div>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import { mapGetters } from 'vuex';
+import Note from '@/components/Note'
+import NoteCreate from '@/components/NoteCreate';
 
 export default {
-  name: 'HomeView',
   components: {
-    HelloWorld
-  }
+    Note,
+    NoteCreate
+  },
+  computed: {
+    ...mapGetters(['notes'])
+  },
 }
 </script>

@@ -1,0 +1,28 @@
+.btn {
+  background-color: transparent;
+  border: 1px solid $green;
+  border-radius: 10px;
+  padding: 5px 10px;
+  color: $black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+
+  @media (max-width: $md) {
+    padding: 5px 8px;
+  }
+
+  &:hover {
+    background-color: $green;
+    color: $white;
+  }
+
+  &.danger {
+    border-color: $red;
+
+    &:hover {
+      background-color: $red;
+    }
+  }
+}

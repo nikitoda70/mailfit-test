@@ -1,0 +1,13 @@
+.checkbox {
+  width: 20px;
+  height: 20px;
+
+  @media (max-width: $md) {
+    width: 15px;
+    height: 15px;
+  }
+
+  &:disabled {
+    display: none;
+  }
+}

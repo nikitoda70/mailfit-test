@@ -1,0 +1,56 @@
+.notes-form {
+  margin-bottom: 60px;
+
+  @media (max-width: $xl) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $md) {
+    margin-bottom: 30px;
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+
+    > .input-text {
+      margin-right: 10px;
+    }
+
+    > .btn {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__submit {
+    width: 20%;
+    margin-bottom: 20px;
+
+    @media (max-width: $md) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__tasks {
+    display: flex;
+    margin-bottom: 15px;
+    flex-direction: column;
+
+    @media (max-width: $md) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__task {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+
+    &-text {
+      max-width: 90%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
